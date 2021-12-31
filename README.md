@@ -2,9 +2,11 @@
 Data scraped from 8a.nu
 
 
-# bmi-analysis branch takes each climber's bmi to the graded climb sent and plots it on a scatter plot
+**bmi-analysis branch**
 
-higher opaqueness means higher frequency of that data point
+  -takes each climber's bmi to the graded climb sent and plots it on a scatter plot
 
-![This is an image](https://imgur.com/XPuWgvY)
+  -higher opaqueness means higher frequency of that data point
+
+  ![bmi vs grade scatterplot](https://imgur.com/XPuWgvY)
 
