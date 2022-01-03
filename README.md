@@ -1,5 +1,5 @@
 # Climbing-Analysis
-Data scraped from 8a.nu
+Data scraped from 8a.nu, Taken from https://www.kaggle.com/dcohen21/8anu-climbing-logbook
 
 
 **bmi analysis branch**
