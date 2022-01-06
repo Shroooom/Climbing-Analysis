@@ -11,7 +11,7 @@ csvreader = csv.reader(file)
 header = []
 header = next(csvreader)
 header = [header[0], header[5], header[6], header[7], header[8]]
-print(header)
+# print("scraped from user.csv: ", header)
 
 rows = []
 for row in csvreader:
@@ -26,13 +26,15 @@ file.close()
 
 # Gathers Ascent data of each user from csv file
 #  scrapes: user id and grade_id
+##### to use a data file with more data points, comment line 30 and uncomment line 31 #####
 file1 = open('ascent100k.csv', encoding="utf8")
+# file1 = open('ascent750k.csv', encoding="utf8")
 csvreader1 = csv.reader(file1)
 
 header1 = []
 header1 = next(csvreader1)
 header1 = [header1[1], header1[2]]
-print(header1)
+# print("scraped from ascent*.csv: ", header1)
 
 rows1 = []
 for row1 in csvreader1:
@@ -89,9 +91,6 @@ for bmi in y_points:
         count = count+1
 mean_bmi = mean_bmi/count
 print("Average BMI of ", count, " climbers: ", mean_bmi)
-
-
-
 
 # x_points -> grade_id
 # y_points -> bmi of climber
@@ -204,6 +203,8 @@ bmi_v13 = bmi_v13/count_v13
 bmi_v14 = bmi_v14/count_v14
 bmi_v15 = bmi_v15/count_v15
 
+
+
 print("Average BMI of VB  climber: ", bmi_vb, "  (from ", count_vb, " climbers)")
 print("Average BMI of V0  climber: ", bmi_v0, "  (from ", count_v0, " climbers)")
 print("Average BMI of V1  climber: ", bmi_v1, "  (from ", count_v1, " climbers)")
@@ -230,3 +231,4 @@ plt.ylabel('Body Mass Index')
 plt.xlabel('Climb Difficulty')
 plt.axis([0, 86, 8, 35])
 plt.show()
+
