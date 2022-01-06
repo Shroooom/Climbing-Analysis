@@ -27,8 +27,8 @@ file.close()
 # Gathers Ascent data of each user from csv file
 #  scrapes: user id and grade_id
 ##### to use a data file with more data points, comment line 30 and uncomment line 31 #####
-# file1 = open('ascent100k.csv', encoding="utf8")
-file1 = open('ascent750k.csv', encoding="utf8")
+file1 = open('ascent100k.csv', encoding="utf8")
+# file1 = open('ascent750k.csv', encoding="utf8")
 csvreader1 = csv.reader(file1)
 
 header1 = []
