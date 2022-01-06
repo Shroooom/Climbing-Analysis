@@ -14,10 +14,9 @@ Data scraper https://www.kaggle.com/dcohen21/8anu-climbing-logbook
 
   
   
-  -Average bmi levels for each individual bouldering grade 
+  -Average bmi levels for each individual bouldering grade (Numerated and Graphed)
   ![Average BMI vs individual boulder grades](https://github.com/Shroooom/Climbing-Analysis/blob/main/bmi%20analysis/mean%20bmi%20vs%20individual%20grade.png)
 
-  - In numbers...
   ![Average BMI vs individual boulder grades](https://github.com/Shroooom/Climbing-Analysis/blob/main/bmi%20analysis/avg%20bmi%20vs%20individual%20grade%20graph.png)
 
 **years of experience analysis branch**
