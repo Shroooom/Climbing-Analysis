@@ -47,7 +47,7 @@ for row1 in rows1:
 file1.close()
 
 
-########## BMI analysis with climbing grades sent ##########
+########## BMI vs relative grade sent scatter plot ##########
 
 # find BMI of each user --  weight/height^2
 user_bmi = {}  #Dictionary of [user_id]:[bmi]

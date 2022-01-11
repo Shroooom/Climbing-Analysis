@@ -4,7 +4,7 @@ import numpy as numpy
 
 
 # Gathers user data from csv file
-#  scrapes: id, sex, hiehgt, weight, year started
+#  scrapes: id, sex, height, weight, year started
 file = open('user.csv', encoding="utf8")
 csvreader = csv.reader(file)
 
@@ -47,7 +47,7 @@ for row1 in rows1:
 file1.close()
 
 
-########## BMI analysis with climbing grades sent ##########
+########## average BMI vs grade sent ##########
 
 # find BMI of each user --  weight/height^2
 user_bmi = {}  #Dictionary of [user_id]:[bmi]
