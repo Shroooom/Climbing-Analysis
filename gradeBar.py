@@ -12,7 +12,7 @@ csvreader = csv.reader(file)
 header = []
 header = next(csvreader)
 header = [header[0], header[5], header[6], header[7], header[8]]
-print("scraped from user.csv: ", header)
+# print("scraped from user.csv: ", header)
 
 rows = []
 for row in csvreader:
@@ -35,7 +35,7 @@ csvreader1 = csv.reader(file1)
 header1 = []
 header1 = next(csvreader1)
 header1 = [header1[1], header1[2]]
-print("scraped from ascent*.csv: ", header1)
+# print("scraped from ascent*.csv: ", header1)
 
 rows1 = []
 for row1 in csvreader1:
@@ -57,13 +57,10 @@ y_pointsFemale = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]    #number of male climbers
 
 user_gender = {}  #Dictionary of [user_id]:[gender]
 for user in user_data:
-    if user[0] in user_gender.keys():
-        user_gender[user[0]].append(int(user[1]))
-    else:
         user_gender[user[0]] = int(user[1])
 
 for climber in ascent_data:
-    if climber[1].isnumeric():
+    if climber[1].isnumeric() and climber[0] in user_gender:
         if int(climber[1])<=16:                                  # grade_id 0-16   VB
             if user_gender[climber[0]] == 0:
                 y_pointsMale[0] = y_pointsMale[0]+1
