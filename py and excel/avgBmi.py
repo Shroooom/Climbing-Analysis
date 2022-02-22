@@ -27,8 +27,8 @@ file.close()
 # Gathers Ascent data of each user from csv file
 #  scrapes: user id and grade_id
 ##### to use a data file with more data points, comment line 30 and uncomment line 31 #####
-file1 = open('ascent100k.csv', encoding="utf8")
-# file1 = open('ascent750k.csv', encoding="utf8")
+# file1 = open('ascent100k.csv', encoding="utf8")
+file1 = open('ascent750k.csv', encoding="utf8")
 csvreader1 = csv.reader(file1)
 
 header1 = []
@@ -186,7 +186,51 @@ y_plot = [bmi_v[0], bmi_v[1], bmi_v[2], bmi_v[3], bmi_v[4], bmi_v[5], bmi_v[6], 
 for i in range(17):
     print("Average BMI of ", x_plot[i], " climber: ", "%.3f" % bmi_v[i], "  (from ", count_v[i], " climbers)")
 
-# Scatter plot
+# find line of best fit 
+# following formula: slope = sum((x-x_a)(y-y_a))/sum((x-x_a)^2)
+#   and y_a = a(x_a) + b 
+xvar = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+yvar = y_plot
+x_a = 0
+y_a = 0
+for i in xvar:
+    x_a = x_a+i
+x_a =  x_a/17
+for i in yvar:
+    y_a = y_a+i
+y_a =  y_a/17
+
+diffxx_a = []
+diffyy_a = []
+for i in range(17):
+    diffxx_a.append(xvar[i]-x_a)
+    diffyy_a.append(yvar[i]-y_a)
+
+multDenom = []
+multNumer = []
+for i in range(17):
+    multDenom.append(diffxx_a[i]*diffxx_a[i])
+    multNumer.append(diffxx_a[i]*diffyy_a[i])
+
+sumMultDenom = 0
+sumMultNumer = 0
+for i in range(17):
+    sumMultDenom = sumMultDenom + multDenom[i]
+    sumMultNumer = sumMultNumer + multNumer[i]
+
+slope = sumMultNumer/sumMultDenom
+yintercept = y_a-(slope*x_a)
+yend = (slope*17)+yintercept
+
+slope = round(slope,2)
+yintercept = round(yintercept,2)
+lineLabel = "y = " + str(slope) + "x + " + str(yintercept)
+print(lineLabel)
+# draw line of best fit
+plt.plot([0,16], [yintercept,yend], color = 'red', label="line of best fit: " + lineLabel)
+plt.legend(loc="upper right")
+
+# plot Scatter
 plt.scatter(x_plot, y_plot, s=50)
 plt.ylabel('Average Body Mass Index')
 plt.xlabel('Climb Difficulty')
