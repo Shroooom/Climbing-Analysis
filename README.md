@@ -12,7 +12,7 @@ Data scraper https://www.kaggle.com/dcohen21/8anu-climbing-logbook
 
   -takes each climber's bmi to the graded climb sent and plots it on a scatter plot
 
-  -higher opaqueness means higher frequency of that data point
+  -opacity correlates to frequency of specific data point
 
   ![bmi vs grade scatterplot](https://github.com/Shroooom/Climbing-Analysis/blob/main/screenshots/bmi%20vs%20grade.png)
 
