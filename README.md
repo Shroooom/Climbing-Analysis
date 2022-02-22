@@ -14,6 +14,8 @@ Data scraper https://www.kaggle.com/dcohen21/8anu-climbing-logbook
 
   -opacity correlates to frequency of specific data point
 
+   Average BMI of  506839  climbers:  22.036
+   
   ![bmi vs grade scatterplot](https://github.com/Shroooom/Climbing-Analysis/blob/main/screenshots/bmi%20vs%20grade.png)
 
   
