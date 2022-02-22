@@ -96,40 +96,15 @@ print("Average BMI of ", count, " climbers: ", mean_bmi)
 # x_points -> grade_id
 # y_points -> bmi of climber
 # find average BMI of each grade Climber
-bmi_vb = float(0)
-count_vb = 0
-bmi_v0 = float(0)
-count_v0 = 0
-bmi_v1 = float(0)
-count_v1 = 0
-bmi_v2 = float(0)
-count_v2 = 0
-bmi_v3 = float(0)
-count_v3 = 0
-bmi_v4 = float(0)
-count_v4 = 0
-bmi_v5 = float(0)
-count_v5 = 0
-bmi_v6 = float(0)
-count_v6 = 0
-bmi_v7 = float(0)
-count_v7 = 0
-bmi_v8 = float(0)
-count_v8 = 0
-bmi_v9 = float(0)
-count_v9 = 0
-bmi_v10 = float(0)
-count_v10 = 0
-bmi_v11 = float(0)
-count_v11 = 0
-bmi_v12 = float(0)
-count_v12 = 0
-bmi_v13 = float(0)
-count_v13 = 0
-bmi_v14 = float(0)
-count_v14 = 0
-bmi_v15 = float(0)
-count_v15 = 0
+bmi_vb,bmi_v0,bmi_v1,bmi_v2,bmi_v3 = float(0),float(0),float(0),float(0),float(0)
+bmi_v4,bmi_v5,bmi_v6,bmi_v7 = float(0),float(0),float(0),float(0)
+bmi_v8,bmi_v9,bmi_v10,bmi_v11 = float(0),float(0),float(0),float(0)
+bmi_v12,bmi_v13,bmi_v14,bmi_v15 = float(0),float(0),float(0),float(0)
+count_vb,count_v0,count_v1,count_v2,count_v3 = 0,0,0,0,0
+count_v4,count_v5,count_v6,count_v7 = 0,0,0,0
+count_v8,count_v9,count_v10,count_v11 = 0,0,0,0
+count_v12,count_v13,count_v14,count_v15 = 0,0,0,0
+
 
 for gradedIndex in range(len(x_points)):
     if x_points[gradedIndex]<=16:                                  # grade_id 0-16   VB
