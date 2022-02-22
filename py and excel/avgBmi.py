@@ -96,111 +96,95 @@ print("Average BMI of ", count, " climbers: ", mean_bmi)
 # x_points -> grade_id
 # y_points -> bmi of climber
 # find average BMI of each grade Climber
-bmi_vb,bmi_v0,bmi_v1,bmi_v2,bmi_v3 = float(0),float(0),float(0),float(0),float(0)
-bmi_v4,bmi_v5,bmi_v6,bmi_v7 = float(0),float(0),float(0),float(0)
-bmi_v8,bmi_v9,bmi_v10,bmi_v11 = float(0),float(0),float(0),float(0)
-bmi_v12,bmi_v13,bmi_v14,bmi_v15 = float(0),float(0),float(0),float(0)
-count_vb,count_v0,count_v1,count_v2,count_v3 = 0,0,0,0,0
-count_v4,count_v5,count_v6,count_v7 = 0,0,0,0
-count_v8,count_v9,count_v10,count_v11 = 0,0,0,0
-count_v12,count_v13,count_v14,count_v15 = 0,0,0,0
-
+bmi_v = [float(0),0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+count_v = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 for gradedIndex in range(len(x_points)):
-    if x_points[gradedIndex]<=16:                                  # grade_id 0-16   VB
-        bmi_vb = bmi_vb+y_points[gradedIndex]
-        count_vb = count_vb+1
-    elif x_points[gradedIndex]>=17 and x_points[gradedIndex]<=28:  # grade_id 17-28  V0
-        bmi_v0 = bmi_v0+y_points[gradedIndex]
-        count_v0 = count_v0+1
-    elif x_points[gradedIndex]>=29 and x_points[gradedIndex]<=32:  # grade_id 29-32  V1
-        bmi_v1 = bmi_v1+y_points[gradedIndex]
-        count_v1 = count_v1+1
-    elif x_points[gradedIndex]>=33 and x_points[gradedIndex]<=35:  # grade_id 33-35  V2
-        bmi_v2 = bmi_v2+y_points[gradedIndex]
-        count_v2 = count_v2+1
-    elif x_points[gradedIndex]>=36 and x_points[gradedIndex]<=38:  # grade_id 36-38  V3
-        bmi_v3 = bmi_v3+y_points[gradedIndex]
-        count_v3 = count_v3+1    
-    elif x_points[gradedIndex]>=39 and x_points[gradedIndex]<=42:  # grade_id 39-42  V4
-        bmi_v4 = bmi_v4+y_points[gradedIndex]
-        count_v4 = count_v4+1
-    elif x_points[gradedIndex]>=43 and x_points[gradedIndex]<=46:  # grade_id 43-46  V5
-        bmi_v5 = bmi_v5+y_points[gradedIndex]
-        count_v5 = count_v5+1
-    elif x_points[gradedIndex]>=47 and x_points[gradedIndex]<=50:  # grade_id 47-50  V6
-        bmi_v6 = bmi_v6+y_points[gradedIndex]
-        count_v6 = count_v6+1
-    elif x_points[gradedIndex]>=51 and x_points[gradedIndex]<=52:  # grade_id 51-52  V7
-        bmi_v7 = bmi_v7+y_points[gradedIndex]
-        count_v7 = count_v7+1   
-    elif x_points[gradedIndex]>=53 and x_points[gradedIndex]<=55:  # grade_id 53-55  V8
-        bmi_v8 = bmi_v8+y_points[gradedIndex]
-        count_v8 = count_v8+1
-    elif x_points[gradedIndex]>=56 and x_points[gradedIndex]<=58:  # grade_id 56-58  V9
-        bmi_v9 = bmi_v9+y_points[gradedIndex]
-        count_v9 = count_v9+1
-    elif x_points[gradedIndex]>=59 and x_points[gradedIndex]<=60:  # grade_id 59-60  V10
-        bmi_v10 = bmi_v10+y_points[gradedIndex]
-        count_v10 = count_v10+1
-    elif x_points[gradedIndex]>=61 and x_points[gradedIndex]<=63:  # grade_id 61-63  V11
-        bmi_v11 = bmi_v11+y_points[gradedIndex]
-        count_v11 = count_v11+1
-    elif x_points[gradedIndex]>=64 and x_points[gradedIndex]<=65:  # grade_id 64-65  V12
-        bmi_v12 = bmi_v12+y_points[gradedIndex]
-        count_v12 = count_v12+1
-    elif x_points[gradedIndex]>=66 and x_points[gradedIndex]<=67:  # grade_id 66-67  V13
-        bmi_v13 = bmi_v13+y_points[gradedIndex]
-        count_v13 = count_v13+1
-    elif x_points[gradedIndex]>=68 and x_points[gradedIndex]<=69:  # grade_id 68-69  V14
-        bmi_v14 = bmi_v14+y_points[gradedIndex]
-        count_v14 = count_v14+1
-    elif x_points[gradedIndex]>=70:                                # grade_id 70+    V15   
-        bmi_v15 = bmi_v15+y_points[gradedIndex]
-        count_v15 = count_v15+1
+    ### grade_id 0-16   VB
+    if x_points[gradedIndex]<=16:                                  
+        bmi_v[0] = bmi_v[0]+y_points[gradedIndex]
+        count_v[0] = count_v[0]+1
+    ### grade_id 17-28  V0
+    elif x_points[gradedIndex]>=17 and x_points[gradedIndex]<=28:  
+        bmi_v[1] = bmi_v[1]+y_points[gradedIndex]
+        count_v[1] = count_v[1]+1
+    ### grade_id 29-32  V1
+    elif x_points[gradedIndex]>=29 and x_points[gradedIndex]<=32:  
+        bmi_v[2] = bmi_v[2]+y_points[gradedIndex]
+        count_v[2] = count_v[2]+1
+    ### grade_id 33-35  V2
+    elif x_points[gradedIndex]>=33 and x_points[gradedIndex]<=35:  
+        bmi_v[3] = bmi_v[3]+y_points[gradedIndex]
+        count_v[3] = count_v[3]+1
+    ### grade_id 36-38  V3
+    elif x_points[gradedIndex]>=36 and x_points[gradedIndex]<=38:  
+        bmi_v[4] = bmi_v[4]+y_points[gradedIndex]
+        count_v[4] = count_v[4]+1    
+    ### grade_id 39-42  V4
+    elif x_points[gradedIndex]>=39 and x_points[gradedIndex]<=42:  
+        bmi_v[5] = bmi_v[5]+y_points[gradedIndex]
+        count_v[5] = count_v[5]+1
+    ### grade_id 43-46  V5
+    elif x_points[gradedIndex]>=43 and x_points[gradedIndex]<=46:  
+        bmi_v[6] = bmi_v[6]+y_points[gradedIndex]
+        count_v[6] = count_v[6]+1
+    ### grade_id 47-50  V6
+    elif x_points[gradedIndex]>=47 and x_points[gradedIndex]<=50:  
+        bmi_v[7] = bmi_v[7]+y_points[gradedIndex]
+        count_v[7] = count_v[7]+1
+    ### grade_id 51-52  V7
+    elif x_points[gradedIndex]>=51 and x_points[gradedIndex]<=52:  
+        bmi_v[8] = bmi_v[8]+y_points[gradedIndex]
+        count_v[8] = count_v[8]+1   
+    ### grade_id 53-55  V8
+    elif x_points[gradedIndex]>=53 and x_points[gradedIndex]<=55:  
+        bmi_v[9] = bmi_v[9]+y_points[gradedIndex]
+        count_v[9] = count_v[9]+1
+    ### grade_id 56-58  V9
+    elif x_points[gradedIndex]>=56 and x_points[gradedIndex]<=58:  
+        bmi_v[10] = bmi_v[10]+y_points[gradedIndex]
+        count_v[10] = count_v[10]+1
+    ### grade_id 59-60  V10
+    elif x_points[gradedIndex]>=59 and x_points[gradedIndex]<=60:  
+        bmi_v[11] = bmi_v[11]+y_points[gradedIndex]
+        count_v[11] = count_v[11]+1
+    ### grade_id 61-63  V11
+    elif x_points[gradedIndex]>=61 and x_points[gradedIndex]<=63:  
+        bmi_v[12] = bmi_v[12]+y_points[gradedIndex]
+        count_v[12] = count_v[12]+1
+    ### grade_id 64-65  V12
+    elif x_points[gradedIndex]>=64 and x_points[gradedIndex]<=65:  
+        bmi_v[13] = bmi_v[13]+y_points[gradedIndex]
+        count_v[13] = count_v[13]+1
+    ### grade_id 66-67  V13
+    elif x_points[gradedIndex]>=66 and x_points[gradedIndex]<=67:  
+        bmi_v[14] = bmi_v[14]+y_points[gradedIndex]
+        count_v[14] = count_v[14]+1
+    ### grade_id 68-69  V14
+    elif x_points[gradedIndex]>=68 and x_points[gradedIndex]<=69:  
+        bmi_v[15] = bmi_v[15]+y_points[gradedIndex]
+        count_v[15] = count_v[15]+1
+    ### grade_id 70+    V15
+    elif x_points[gradedIndex]>=70:                                   
+        bmi_v[16] = bmi_v[16]+y_points[gradedIndex]
+        count_v[16] = count_v[16]+1
     else:
-        print("you should not be here")
+        print("you will never see this")
 
-bmi_vb = bmi_vb/count_vb
-bmi_v0 = bmi_v0/count_v0
-bmi_v1 = bmi_v1/count_v1
-bmi_v2 = bmi_v2/count_v2
-bmi_v3 = bmi_v3/count_v3
-bmi_v4 = bmi_v4/count_v4
-bmi_v5 = bmi_v5/count_v5
-bmi_v6 = bmi_v6/count_v6
-bmi_v7 = bmi_v7/count_v7
-bmi_v8 = bmi_v8/count_v8
-bmi_v9 = bmi_v9/count_v9
-bmi_v10 = bmi_v10/count_v10
-bmi_v11 = bmi_v11/count_v11
-bmi_v12 = bmi_v12/count_v12
-bmi_v13 = bmi_v13/count_v13
-bmi_v14 = bmi_v14/count_v14
-bmi_v15 = bmi_v15/count_v15
+# divide total/count to get average
+for i in range(17):
+    bmi_v[i] = bmi_v[i]/count_v[i]
 
-print("Average BMI of VB  climber: ", "%.3f" % bmi_vb, "  (from ", count_vb, " climbers)")
-print("Average BMI of V0  climber: ", "%.3f" % bmi_v0, "  (from ", count_v0, " climbers)")
-print("Average BMI of V1  climber: ", "%.3f" % bmi_v1, "  (from ", count_v1, " climbers)")
-print("Average BMI of V2  climber: ", "%.3f" % bmi_v2, "  (from ", count_v2, " climbers)")
-print("Average BMI of V3  climber: ", "%.3f" % bmi_v3, "  (from ", count_v3, " climbers)")
-print("Average BMI of V4  climber: ", "%.3f" % bmi_v4, "  (from ", count_v4, " climbers)")
-print("Average BMI of V5  climber: ", "%.3f" % bmi_v5, "  (from ", count_v5, " climbers)")
-print("Average BMI of V6  climber: ", "%.3f" % bmi_v6, "  (from ", count_v6, " climbers)")
-print("Average BMI of V7  climber: ", "%.3f" % bmi_v7, "  (from ", count_v7, " climbers)")
-print("Average BMI of V8  climber: ", "%.3f" % bmi_v8, "  (from ", count_v8, " climbers)")
-print("Average BMI of V9  climber: ", "%.3f" % bmi_v9, "  (from ", count_v9, " climbers)")
-print("Average BMI of V10 climber: ", "%.3f" % bmi_v10, "  (from ", count_v10, " climbers)")
-print("Average BMI of V11 climber: ", "%.3f" % bmi_v11, "  (from ", count_v11, " climbers)")
-print("Average BMI of V12 climber: ", "%.3f" % bmi_v12, "  (from ", count_v12, " climbers)")
-print("Average BMI of V13 climber: ", "%.3f" % bmi_v13, "  (from ", count_v13, " climbers)")
-print("Average BMI of V14 climber: ", "%.3f" % bmi_v14, "  (from ", count_v14, " climbers)")
-print("Average BMI of V15 climber: ", "%.3f" % bmi_v15, "  (from ", count_v15, " climbers)")
 
-x_plot = ["VB ", "V0 ", "V1 ", "V2 ", "V3 ", "V4 ", "V5 ", "V6 ", "V7 ", "V8 ", "V9 ", 
+#  axis for graphing and printing
+x_plot = ["VB", "V0", "V1", "V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", 
           "V10", "V11", "V12", "V13", "V14", "V15"]
-y_plot = [bmi_vb, bmi_v0, bmi_v1, bmi_v2, bmi_v3, bmi_v4, bmi_v5, bmi_v6, bmi_v7, bmi_v8,
-          bmi_v9, bmi_v10, bmi_v11, bmi_v12, bmi_v13, bmi_v14, bmi_v15]
+y_plot = [bmi_v[0], bmi_v[1], bmi_v[2], bmi_v[3], bmi_v[4], bmi_v[5], bmi_v[6], bmi_v[7], bmi_v[8], bmi_v[9],
+          bmi_v[10], bmi_v[11], bmi_v[12], bmi_v[13], bmi_v[14], bmi_v[15], bmi_v[16]]
+
+# print statements
+for i in range(17):
+    print("Average BMI of ", x_plot[i], " climber: ", "%.3f" % bmi_v[i], "  (from ", count_v[i], " climbers)")
 
 # Scatter plot
 plt.scatter(x_plot, y_plot, s=50)
