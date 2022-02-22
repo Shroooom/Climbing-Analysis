@@ -4,6 +4,7 @@ Data scraper https://www.kaggle.com/dcohen21/8anu-climbing-logbook
  Data is scraped from from 8a.nu.
 
 **General stats**
+
   -bar graph of total male and female climbers for grades.
   ![Grade Bar Graph](https://github.com/Shroooom/Climbing-Analysis/blob/main/screenshots/Male%20and%20Female%20number%20of%20climbers%20to%20grade%20ratio.png)
 
